@@ -13,7 +13,7 @@ function newtonroot(f, f′; x₀ = 0, tol = 1E-7, maxiter = 1000)
     x = x₀
     normdiff = Inf
     iter = 0
-    while normdiff > tol && iter < maxiter
+    while normdiff > tol && iter > maxiter
 
         if f′(x)==0
             println("Derivative equals to 0. Process terminated.")
