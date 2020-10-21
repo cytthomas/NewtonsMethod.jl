@@ -2,6 +2,13 @@ module NewtonsMethod
 
 using ForwardDiff, LinearAlgebra
 
+"""
+    newtonroot(f, f′; x₀ = 0, tol = 1E-7, maxiter = 1000)
+
+    Solves f(x)=0 using Newton's Method.
+        
+"""
+
 function newtonroot(f, f′; x₀ = 0, tol = 1E-7, maxiter = 1000)
     x = x₀
     normdiff = Inf
