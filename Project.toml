@@ -1,7 +1,11 @@
 name = "NewtonsMethod"
-uuid = "f0be893a-eff5-4ee5-8a4d-d8212b5d0d4d"
+uuid = "7d1fe45a-8786-49d5-b2f2-bded30343723"
 authors = ["cytthomas <t.y.t.chan.ubc@gmail.com> and contributors"]
 version = "0.1.0"
+
+[deps]
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [compat]
 julia = "1"
