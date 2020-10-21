@@ -33,6 +33,7 @@ using NewtonsMethod
     @test iteration2d <= 5            
     @test difference2e < 1E-10
     @test x2f == nothing      # testing if value is nothing
+    @test isnothing(x2f)
 
     f3(x) = 3*exp(2*x) - 6*x^2  # third equation with real root
     f3′(x) = 6*exp(2*x) - 12*x
@@ -56,11 +57,15 @@ using NewtonsMethod
     (x4e, difference4e, iteration4e) = newtonroot(f4, x₀=2, tol = 1E-10)  
     (x4f, difference4f, iteration4f) = newtonroot(f4)  
     @test x4a == nothing
+    @test isnothing(x4a)
     @test x4b == nothing
+    @test isnothing(x4b)
     @test x4c == nothing
+    @test isnothing(x4c)
     @test iteration4d <= 5            
     @test difference4e >= 1E-10  # since it should not converge, difference should be larger than tol
-    @test x4a == nothing       # testing again if derivative equals 0 output nothing
+    @test x4f == nothing       # testing again if derivative equals 0 output nothing
+    @test isnothing(x4f)
 
 end
 
